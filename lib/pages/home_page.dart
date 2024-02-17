@@ -29,10 +29,11 @@ class _HomePageState extends State<HomePage> {
     if (sorted) {
       notes.sort((a, b) => a.modifiedTime.compareTo(b.modifiedTime));
     } else {
-      notes.sort((a, b) => a.modifiedTime.compareTo(b.modifiedTime));
+      notes.sort((b, a) => a.modifiedTime.compareTo(b.modifiedTime));
     }
 
-    sorted != sorted;
+    sorted = !sorted;
+
     return notes;
   }
 
